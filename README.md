@@ -60,6 +60,6 @@ In the rJAGS_models folder, you will find .txt files containing the hierarchical
 
 You will need to specify in Get_ModelEstimates.R which of these models you wish to estimate and what parameters to monitor. 
 
-I have tried to simplify and anote the code in the clearest way possible. And it should all run out of the box provided you have the prerequisit packages up and running. For Windows users, you will need to replace / by \ in the path directories. If you discover bugs or errors, please let me know. 
+I have tried to simplify and anote the code in the clearest way possible, and it should all run out of the box provided you have the prerequisit packages up and running. For Windows users, you will need to replace / by \ in the path directories. If you discover bugs or errors, please let me know. 
 
 
