@@ -1,6 +1,6 @@
 [![DOI](https://zenodo.org/badge/93639776.svg)](https://zenodo.org/badge/latestdoi/93639776)
 
-# TMS-fMRI_strategic_interaction
+# TMS-fMRI_strategic_interaction Code release 1.0.0
 
 Welcome. This repository contains Matlab and R code to replicate all figures and pipelines to estimate the computational models, as well as compressed fMRI t-maps. I hope it will serve future researcher interested in the topic of dyadic competitive interactions. If you plan to use the data for a project or come up with a new models to capture these complex behaviours, I would be interested to learn about it. Drop my an email at Christoph.hill0ATgmail.com. 
 
@@ -60,6 +60,6 @@ In the rJAGS_models folder, you will find .txt files containing the hierarchical
 
 You will need to specify in Get_ModelEstimates.R which of these models you wish to estimate and what parameters to monitor. 
 
-I have tried to simplify and anote the code in the clearest way possible, and it should all run out of the box provided you have the prerequisit packages up and running. For Windows users, you will need to replace / by \ in the path directories. If you discover bugs or errors, please let me know. 
+I have tried to simplify and anote the code in the clearest way possible, and it should all run out of the box provided you have the prerequisit packages up and running. For Windows users, you will need to replace / by \ in the path directories. If you discover bugs or errors, please let me know. I will be periodically updating this repo in the near future. 
 
 
