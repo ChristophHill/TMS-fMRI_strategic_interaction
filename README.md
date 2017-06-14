@@ -1,6 +1,7 @@
 [![DOI](https://zenodo.org/badge/93639776.svg)](https://zenodo.org/badge/latestdoi/93639776)
 
-# TMS-fMRI_strategic_interaction Code release 1.0.0
+# TMS-fMRI_strategic_interaction 
+# Code release 1.0.0
 
 Welcome. This repository contains Matlab and R code to replicate all figures and pipelines to estimate the computational models, as well as compressed fMRI t-maps. I hope it will serve future researcher interested in the topic of dyadic competitive interactions. If you plan to use the data for a project or come up with a new models to capture these complex behaviours, I would be interested to learn about it. Drop my an email at Christoph.hill0ATgmail.com. 
 
