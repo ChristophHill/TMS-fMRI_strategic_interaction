@@ -38,7 +38,7 @@ The figure-generating code are named as follow:
 * MakeFigure5_B.m
 * MakeFigure6.m
 
-# Process raw data and estimate hierarchical models
+# Process choice data and estimate hierarchical models
 
 You may also extract the processed data from the raw choice data directly, which will then be used by the figure-generating code. 
 For this, use the following Matlab script located under source/Get_Processed_data/Behavioral_modeling
