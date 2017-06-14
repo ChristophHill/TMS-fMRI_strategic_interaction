@@ -5,7 +5,7 @@
 Welcome. This repository contains Matlab and R code to replicate all figures and pipelines to estimate the computational models, as well as compressed fMRI t-maps. 
 I hope it will serve future researcher interested in the topic of dyadic competitive interactions. If you plan to use the data for a project or come up with a new models to capture these complex behaviours, I would be interested to learn about it. Drop my an email at Christoph.hill0ATgmail.com. 
 
-What you will need to run the code for the figures 
+What you will need to run the code for the figures: 
 * Up to date version of Matlab with statistical toolbox 
 * R, with ggplot package (http://ggplot2.org) 
 
@@ -60,3 +60,7 @@ In the rJAGS_models folder, you will find .txt files containing the hierarchical
 * Influence Mixture (Mixture model between Influence Learning and Mixed-Equilibrium)
 
 You will need to specify in Get_ModelEstimates.R which of these models you wish to estimate and what parameters to monitor. 
+
+I have tried to simplify and anote the code in the clearest way possible. And it should all run out of the box provided you have the prerequisit packages up and running. For Windows users, you will need to replace '/' by '\' in the path directories. If you discover bugs or errors, please let me know. 
+
+
