@@ -1,0 +1,55 @@
+
+var v1_data[T,S], v0_data[T,S], payoffM[2,2];
+
+model {
+
+	payoffM[1,1] <- 0
+	payoffM[1,2] <- 1
+	payoffM[2,1] <- 1
+	payoffM[2,2] <- 0
+
+	for (s in 1:S) {
+	
+		eta_yee.p[s] ~ dbeta(eta_yee.alpha, eta_yee.beta)T(0.001,0.999)
+#		kappa_yee.p[s] ~ dbeta(kappa_yee.alpha, kappa_yee.beta)T(0.001,0.999)
+		beta_yee.p[s] ~ dbeta(beta_yee.alpha, beta_yee.beta)T(0.001,0.999)
+#		beta_yee.p[s] ~ dnorm(beta_yee.mu, beta_yee.pr)T(0.0001,20)
+	
+		v1_data[1,s] <- 0
+		v0_data[1,s] <- 0
+	
+		for (t in 1:(T-1)) {
+		
+			v1_data[t+1,s] <- ifelse(choices_yee[t,s]==1, v1_data[t,s] + eta_yee.p[s]*(payoffM[1,(2-choices_yer[t,s])]-v1_data[t,s]), v1_data[t,s])
+		
+			v0_data[t+1,s] <- ifelse(choices_yee[t,s]==0, v0_data[t,s] + eta_yee.p[s]*(payoffM[2,(2-choices_yer[t,s])]-v0_data[t,s]), v0_data[t,s])
+		
+			z[t,s] <- (v1_data[t,s] - v0_data[t,s])* beta_yee.p[s] * 15
+			p[t,s] <- 1 / (1 + exp(-z[t,s]))
+			choices_yee[t+1,s] ~ dbern(p[t,s])
+			
+		}
+	
+	}
+	
+	eta_yee.alpha <- eta_yee.mu * eta_yee.kappa
+    eta_yee.beta <- (1 - eta_yee.mu) * eta_yee.kappa
+    eta_yee.mu ~ dbeta(1, 1)
+    eta_yee.kappa ~ dunif(0.001,100) #dgamma(1, 0.1)
+    
+#    kappa_yee.alpha <- kappa_yee.mu * kappa_yee.kappa
+#    kappa_yee.beta <- (1 - kappa_yee.mu) * kappa_yee.kappa
+#    kappa_yee.mu ~ dbeta(1, 1)
+#    kappa_yee.kappa ~ dunif(0.001,100) #dgamma(1, 0.1)
+    
+    beta_yee.alpha <- beta_yee.mu * beta_yee.kappa
+    beta_yee.beta <- (1 - beta_yee.mu) * beta_yee.kappa
+    beta_yee.mu ~ dbeta(1, 1)
+    beta_yee.kappa ~ dunif(0.001,100) #dgamma(1, 0.1)
+    
+#    beta_yee.mu ~ dunif(0.00001,15)
+#	beta_yee.si ~ dunif(0.0001, 15)
+#	beta_yee.pr <- pow(beta_yee.si,-2)
+
+}
+

@@ -1,0 +1,20 @@
+
+model {
+
+	for (s in 1:S) {
+
+		beta_yee.p[s] ~ dbeta(beta_yee.alpha, beta_yee.beta)T(0.001,0.999)
+		
+		for (t in 1:(T-1)) {
+			
+			choices_yee[t,s] ~ dbern(beta_yee.p[s])
+			
+		}
+	}
+
+	beta_yee.alpha <- beta_yee.mu * beta_yee.kappa
+    beta_yee.beta <- (1 - beta_yee.mu) * beta_yee.kappa
+    beta_yee.mu ~ dbeta(1, 1)
+    beta_yee.kappa ~ dunif(0.001,100) #dgamma(1, 0.1)
+    
+}

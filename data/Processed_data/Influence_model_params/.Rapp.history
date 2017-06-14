@@ -1,0 +1,2 @@
+load("/Users/chill/Desktop/REPO/data/Processed_data/Influence_model_params/results_rJAGS_InfluenceLearning_cTBS-vertex_R1.RDATA")
+load("/Users/chill/Desktop/REPO/data/Processed_data/Influence_model_params/results_Vertex_run1.RData")

@@ -1,0 +1,56 @@
+
+var q_data[T,S], pp_data[T,S], delta1[T,S], delta2[T,S];
+
+model {
+
+	for (s in 1:S) {
+	
+		eta_yee.p[s] ~ dbeta(eta_yee.alpha, eta_yee.beta)T(0.001,0.999)
+		kappa_yee.p[s] ~ dbeta(kappa_yee.alpha, kappa_yee.beta)T(0.001,0.999)
+		beta_yee.p[s] ~ dbeta(beta_yee.alpha, beta_yee.beta)T(0.001,0.999)
+		Lambda_yee.p[s] ~ dbeta(Lambda_yee.alpha, Lambda_yee.beta)T(0.001,0.999)
+	
+		q_data[1,s] <- 0.5
+	
+		for (t in 1:(T-1)) {
+		
+			delta1[t,s] <- choices_yer[t,s] - q_data[t,s]
+			
+			#influence part
+			pp_data[t,s] <- (1 - equals(q_data[t,s], 0)) * ifelse( q_data[t,s]==1, 1, 
+									max(0, min(1, (0.2 - (log((1-q_data[t,s])/q_data[t,s])/(5*beta_yee.p[s]))))) )
+									
+			delta2[t,s] <- choices_yee[t,s] - pp_data[t,s]
+			
+			q_data[t+1,s] <- max(0, min(1,q_data[t,s] + (eta_yee.p[s]*delta1[t,s]) + (kappa_yee.p[s]*delta2[t,s])))
+			
+			z[t,s] <- beta_yee.p[s] * 15 * (2 - 4*q_data[t,s])
+			p[t,s] <- (1 / (1 + exp(-z[t,s])))*(1-Lambda_yee.p[s])+Lambda_yee.p[s]*0.42
+			choices_yee[t,s] ~ dbern(p[t,s])
+			
+		}
+	
+	}
+	
+	eta_yee.alpha <- eta_yee.mu * eta_yee.kappa
+    eta_yee.beta <- (1 - eta_yee.mu) * eta_yee.kappa
+    eta_yee.mu ~ dbeta(1, 1)
+    eta_yee.kappa ~ dunif(0.001,100) #dgamma(1, 0.1)
+    
+    kappa_yee.alpha <- kappa_yee.mu * kappa_yee.kappa
+    kappa_yee.beta <- (1 - kappa_yee.mu) * kappa_yee.kappa
+    kappa_yee.mu ~ dbeta(1, 1)
+    kappa_yee.kappa ~ dunif(0.001,100) #dgamma(1, 0.1)
+    
+    beta_yee.alpha <- beta_yee.mu * beta_yee.kappa
+    beta_yee.beta <- (1 - beta_yee.mu) * beta_yee.kappa
+    beta_yee.mu ~ dbeta(1, 1)
+    beta_yee.kappa ~ dunif(0.001,100) #dgamma(1, 0.1)
+    
+    Lambda_yee.alpha <- Lambda_yee.mu * Lambda_yee.kappa
+    Lambda_yee.beta <- (1 - Lambda_yee.mu) * Lambda_yee.kappa
+    Lambda_yee.mu ~ dbeta(1, 1)
+    Lambda_yee.kappa ~ dunif(0.001,100) #dgamma(1, 0.1)
+   
+}
+
