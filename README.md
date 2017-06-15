@@ -46,12 +46,12 @@ The figure-generating scripts are named as follow:
 You may also extract the processed data from the raw choice data directly, which will then be used by the figure-generating code. 
 For this, use the following Matlab script located under source/Get_Processed_data/Behavioral_modeling
 
-```Get_PayoffAndSwitchRates.m``` 
-```GetLogitEstimates.m```
+* ```Get_PayoffAndSwitchRates.m``` 
+* ```GetLogitEstimates.m```
 
 To estimate the computational models, go to source/Get_Processed_data/Computational_modeling, and use:
 
-* Get_ModelEstimates.R
+```Get_ModelEstimates.R```
 
 In the rJAGS_models folder, you will find .txt files containing the hierarchical models for
 
