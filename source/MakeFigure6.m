@@ -42,10 +42,10 @@ GLM_table = dataset({GLM_data, 'Condition', 'Kappa','Eta','Beta_PPI_vmPFC','Beta
 %Data exploration and Validating modeling assumptions
 %--------------------------------------------------------------------------------
 %Here we investigate relationships between Neural effects and model parameters in
-%the cTBS-rTPJ condition. The hypothesis is that the more inhibited the vmPFC-rTPJ 
-%connectivity as a result of cTBS-rTPJ, the lower the Kappa. 
+%the cTBS-rTPJ condition. The hypothesis is that the more disrupted the region 
+%as a result of cTBS-rTPJ, the lower the Kappa. We start with vmPFC connectivity. 
 %--------------------------------------------------------------------------------
-%Simple visual inspection
+%Simple visual inspection to visualize relationship
 data_inspection = figure('color',[1 1 1]);
 set(data_inspection, 'Position', [100 100 1100 400])
 subplot(1,3,1)
@@ -57,7 +57,7 @@ title('Kappa to rTPJ-vmPFC betas in cTBS-rTPJ')
 %We test both robust and standard OLS model to plot residuals
 vmPFC_PPI_cTBSrTPJ_robust = fitlm(GLM_table,'Beta_PPI_vmPFC~Kappa+Eta','RobustOpts','on','Exclude',GLM_table.Condition==0);
 vmPFC_PPI_cTBSrTPJ_normal = fitlm(GLM_table,'Beta_PPI_vmPFC~Kappa+Eta','RobustOpts','off','Exclude',GLM_table.Condition==0);
-%We inspect residuals to validate our modeling choice
+%It's important we inspect residiuals for quality control. 
 subplot(1,3,2)
 plotResiduals(vmPFC_PPI_cTBSrTPJ_robust,'probability')
 subplot(1,3,3)
