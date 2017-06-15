@@ -27,7 +27,7 @@ The figure-generating code is organized by figure panels, with naming convention
 For Figure panel 1 D, the script is called MakeFigure1_C. 
 Running the figure scripts will generate all statistical tests associated with the current figure panel. 
 
-```The figure-generating scripts are named as follow:``` 
+The figure-generating scripts are named as follow:
 
 * MakeFigure1_C.m
 * MakeFigure1_D.m
@@ -46,8 +46,8 @@ Running the figure scripts will generate all statistical tests associated with t
 You may also extract the processed data from the raw choice data directly, which will then be used by the figure-generating code. 
 For this, use the following Matlab script located under source/Get_Processed_data/Behavioral_modeling
 
-* Get_PayoffAndSwitchRates.m 
-* GetLogitEstimates.m
+```Get_PayoffAndSwitchRates.m``` 
+```GetLogitEstimates.m```
 
 To estimate the computational models, go to source/Get_Processed_data/Computational_modeling, and use:
 
