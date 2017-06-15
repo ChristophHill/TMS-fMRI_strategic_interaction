@@ -29,17 +29,17 @@ Running the figure scripts will generate all statistical tests associated with t
 
 The figure-generating scripts are named as follow:
 
-* MakeFigure1_C.m
-* MakeFigure1_D.m
-* MakeFigure2_A.m
-* MakeFigure2_B.m
-* MakeFigure2_C.R (This is an R script) 
-* MakeFigure2_D.m
-* MakeFigure3_B.m
-* MakeFigure4_A.m
-* MakeFigure4_B.m
-* MakeFigure5_B.m
-* MakeFigure6.m
+* ```MakeFigure1_C.m```
+* ```MakeFigure1_D.m```
+* ```MakeFigure2_A.m```
+* ```MakeFigure2_B.m```
+* ```MakeFigure2_C.R (This is an R script)``` 
+* ```MakeFigure2_D.m```
+* ```MakeFigure3_B.m```
+* ```MakeFigure4_A.m```
+* ```MakeFigure4_B.m```
+* ```MakeFigure5_B.m```
+* ```MakeFigure6.m```
 
 # Process choice data and estimate hierarchical models
 
@@ -51,7 +51,7 @@ For this, use the following Matlab script located under source/Get_Processed_dat
 
 To estimate the computational models, go to source/Get_Processed_data/Computational_modeling, and use:
 
-```Get_ModelEstimates.R```
+* ```Get_ModelEstimates.R```
 
 In the rJAGS_models folder, you will find .txt files containing the hierarchical models for
 
