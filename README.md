@@ -27,8 +27,9 @@ The figure-generating code is organized by figure panels, with naming convention
 For Figure panel 1 D, the script is called MakeFigure1_C. 
 Running the figure scripts will generate all statistical tests associated with the current figure panel. 
 
-The figure-generating scripts are named as follow: 
-* ```MakeFigure1_C.m
+```The figure-generating scripts are named as follow:``` 
+
+* MakeFigure1_C.m
 * MakeFigure1_D.m
 * MakeFigure2_A.m
 * MakeFigure2_B.m
@@ -38,7 +39,7 @@ The figure-generating scripts are named as follow:
 * MakeFigure4_A.m
 * MakeFigure4_B.m
 * MakeFigure5_B.m
-* MakeFigure6.m```
+* MakeFigure6.m
 
 # Process choice data and estimate hierarchical models
 
