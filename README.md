@@ -53,7 +53,7 @@ To estimate the computational models, go to source/Get_Processed_data/Computatio
 
 * ```Get_ModelEstimates.R```
 
-In the rJAGS_models folder, you will find .txt files containing the hierarchical models for
+In the rJAGS_models folder, you will find .txt files containing the hierarchical models for: 
 
 * Influence Learning
 * Fictitious play
