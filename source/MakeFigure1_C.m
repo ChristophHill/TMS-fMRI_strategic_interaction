@@ -1,10 +1,13 @@
 clear variables;
 %Code for Figure1 C
-%----------------------------------------------------------
+%---------------------------------------------------------------
 %Model fits (D.I.C.) outputs from rJAGS added over sessions
 %because rJAGS uses MCMC, a probabilistic method, these number may vary
 %slightly over estimations
+%These values may be pulled from the rJAGS result file under "DIC" if you wish to replicate the results or draw a graph for your own.
+%The values entered here correspond to DIC(run1)+DIC(run2) for each of the different models. 
 %Christopher Hill, June 2017
+%---------------------------------------------------------------
 
 %Influence learning
 DIC_cTBSvertex_inf = 5691; 
