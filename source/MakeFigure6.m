@@ -31,6 +31,7 @@ eta_cTBSrTPJ_m = (JAGS_HBM.eta_rTPJ(2, :)+JAGS_HBM.eta_rTPJ(1, :))/2;
 %Build the GLM table
 %We z-score Kappa and Eta for visual comparability in the Figure
 %---------------------------------------------------------------
+%We only have 28 fMRI sets of data in the cTBS-rTPJ condition. 
 GLM_data(:,1) = [zeros(29,1); ones(28,1)]; %Dummy code stim condition
 GLM_data(:,2) = zscore([kappa_cTBSVertex_m kappa_cTBSrTPJ_m(1:28)]);
 GLM_data(:,3) = zscore([eta_cTBSVertex_m eta_cTBSrTPJ_m(1:28)]);
