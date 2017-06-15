@@ -47,7 +47,7 @@ You may also extract the processed data from the raw choice data directly, which
 For this, use the following Matlab script located under source/Get_Processed_data/Behavioral_modeling
 
 * ```Get_PayoffAndSwitchRates.m``` 
-* ```GetLogitEstimates.m```
+* ```Get_LogitEstimates.m```
 
 To estimate the computational models, go to source/Get_Processed_data/Computational_modeling, and use:
 
