@@ -38,7 +38,7 @@ The figure-generating scripts are named as follow:
 * MakeFigure4_A.m
 * MakeFigure4_B.m
 * MakeFigure5_B.m
-* MakeFigure6.m
+* MakeFigure6.m```
 
 # Process choice data and estimate hierarchical models
 
