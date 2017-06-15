@@ -1,9 +1,11 @@
+library(runjags)
+library(R.matlab)
+
 #You will need to install JAGS and then rJAGS on your computer. 
 #https://cran.r-project.org/web/packages/rjags/rjags.pdf
 #Christopher Hill, June 2017. For questions: Christoph.hill0@gmail.com
 #---------------------------------------------------------------------
-library(runjags)
-library(R.matlab)
+
 
 
 #-----------------------------------------------------------------------------------------
@@ -18,14 +20,17 @@ Model = 'rJAGS_InfluenceLearning'
 #Select the parameters you want to monitor 
 #-------------------------------------------------------------------------------------------------------------------------
 #This depends on the model you are using. Check the models.txt files to see what's possible. This is for InfluenceLearning
+#You will need to select what to monitor based on the variables defined in the model .txt files. 
 Monitor = c("eta_yee.mu", "eta_yee.kappa", "kappa_yee.mu", "kappa_yee.kappa", "beta_yee.mu", "beta_yee.kappa","deviance")
 #-------------------------------------------------------------------------------------------------------------------------
 
-#--------------------------------------------------------------------------------------------------
-#Select how many burnin. The greater the number, the more precise the estimates but slower.
-#(Results presented in the paper use 50'000 burnin). This may take hours/days depending on computer
-#--------------------------------------------------------------------------------------------------
-nburnin = 100000
+#----------------------------------------------------------------------------------------------------------------
+#Select how many burnin. The greater the number, the more precise the estimates but slower. 
+#Results presented in the paper use 200000 burnin. This may take a couple of hours hours depending on computer. 
+#It's important to verify that the chains converge, this may be looking at the PrFs in the 'results' summary. 
+#PrFs should be < 1.05.  
+#----------------------------------------------------------------------------------------------------------------
+nburnin = 200000
 
 #-----------------------------------------------------------------------------------------
 #-------------------------RUN ESTIMATION AND SAVE-----------------------------------------
