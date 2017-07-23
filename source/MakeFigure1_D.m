@@ -22,7 +22,9 @@ eta_cTBSrTPJ_m = (JAGS_HBM.eta_rTPJ(2, :)+JAGS_HBM.eta_rTPJ(1, :))/2;
 
 %Load Payoff data
 %-------------------------------------------------------------------------%
-load([data_path, '/Payoffs/Mean_Subject_Payoffs.mat'])
+dataPath = '../data/Processed_data/';
+dataPath = strrep(dataPath, '/', filesep);
+load([dataPath, '/Payoffs/Mean_Subject_Payoffs.mat'])
 
 %Build the GLM table
 %We z-score Kappa and Eta for visual comparability in the Figure

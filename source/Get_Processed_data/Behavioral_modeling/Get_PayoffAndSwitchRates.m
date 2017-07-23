@@ -41,7 +41,10 @@ for cond = 1:2
         
         %--------------------------------
         %1. EXTRACT PAYOFF DATA FROM RAW
-        %-------------------------------
+        %--------------------------------
+        rwd_yee = [];
+        rwd_yer = []; 
+        
         for i = 1:length(choices_yee)
             choices_yee_tmp(i) = choices_yee(i)+1;
             choices_yer_tmp(i) = choices_yer(i)+1;
