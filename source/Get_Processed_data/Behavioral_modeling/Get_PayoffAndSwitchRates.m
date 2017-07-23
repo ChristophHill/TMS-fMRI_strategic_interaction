@@ -18,7 +18,7 @@ RunVec = 2;
 
 %Define payoff matrix
 payoff_mtrx_yee = [0,50;50,0];
-payoff_mtrx_yer = [25,0;0,100];
+payoff_mtrx_yer = [100,0;0,25];
 
 %Path to raw choice data
 cond_path{1} = '/cTBS-vertex/Matlab';

@@ -4,11 +4,13 @@ clear variables;
 %---------------------------------------
 %Effect of Kappa and Eta on Payoff. 
 %Christopher Hill, June 2017
-fullPath = pwd; 
-data_path = [fullPath(1:end-6),'data/Processed_data']; 
+% fullPath = pwd; 
+% data_path = [fullPath(1:end-6),'data/Processed_data']; 
 
 %Load data for parameter Eta and Kappa
-load([data_path, '/Influence_model_params/rJags_Influence_params.mat'])
+filePath = '../data/Processed_data/Influence_model_params/rJags_Influence_params.mat';
+filePath = strrep(filePath, '/', filesep);
+load(filePath);
 
 %Process HBM params. 
 %We average parameters estimated over the two fMRI sessions 
