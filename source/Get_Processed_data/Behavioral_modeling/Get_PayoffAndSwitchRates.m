@@ -86,7 +86,7 @@ end
 Payoff.vertex_yee = payoff_yee(1, :); 
 Payoff.vertex_yer = payoff_yer(1, :);
 Payoff.rTPJ_yee = payoff_yee(2, :); 
-Payoff.rTPJ_yer = payoff_yee(2, :); 
+Payoff.rTPJ_yer = payoff_yer(2, :); 
 
 SavePath = [fullPath(1:end-46),'/data/Processed_data/Payoffs']; 
 save([SavePath,'/Mean_Subject_Payoffs'],'Payoff')
