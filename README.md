@@ -1,5 +1,8 @@
 [![DOI](https://zenodo.org/badge/93639776.svg)](https://zenodo.org/badge/latestdoi/93639776)
 
+# Correction
+* there is a mistake in supplementary figure 2 (and the legend) which wrongfully shows that the ME for the worker is p(work)=.5. It should be p(work)=0.2 and the ME for the boss is p(inspect)=0.5. The line of the plot should be redrawn to the correct level and the sentence should be corrected. This does not affect the models or the analysis, but it does turn over the interpretation - workers work too often! 
+
 # TMS-fMRI_strategic_interaction 
 
 Code release 1.0.0
