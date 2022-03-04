@@ -7,7 +7,7 @@
 
 Code release 1.0.0
 
-Welcome. This repository contains Matlab and R code to replicate all figures and pipelines to estimate the computational models, as well as compressed fMRI t-maps. I hope it will serve future researcher interested in the topic of dyadic competitive interactions. If you plan to use the data for a project or come up with a new models to capture these complex behaviours, I would be interested to learn about it. Drop me an email at Christoph.hill0ATgmail.com. Special thanks to Shinsuke Suzuki and Rafael Polania who have contributed to analysis code for this project. 
+Welcome. This repository contains Matlab and R code to replicate all figures and pipelines to estimate the computational models, as well as compressed fMRI t-maps. I hope it will serve future researcher interested in the topic of dyadic competitive interactions. If you plan to use the data for a project or come up with a new model to capture these complex behaviours, I would be interested to learn about it. Drop me an email at Christoph.hill0ATgmail.com. Special thanks to Shinsuke Suzuki and Rafael Polania who have contributed to code for this project. 
 
 What you will need to run the code for the figures: 
 * Up to date version of Matlab with statistical toolbox 
